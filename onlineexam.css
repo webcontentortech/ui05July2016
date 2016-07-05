@@ -1,0 +1,40 @@
+.maindiv{
+	border:#000 2px solid;
+	font-size: 16px;
+	padding: 400px 30px 30px 30px;
+}
+
+.leftspan{
+	border:#000 1px solid;
+	position: left;
+    padding: 350px 40px 10px 800px;
+    left: 300px;
+
+}
+
+.rightspan{
+	border:#000 1px solid;
+	position: right;
+    padding: 350px 250px 10px 40px;
+    margin: 10px 20px;
+    left: 600px;
+
+}
+
+
+.savebutton{
+	background-color: #ccebff;
+	font-size: 18px;
+	cursor: pointer;
+	padding: 10px 20px;
+	margin: 20px 700px;
+}
+
+.submitbutton{
+	background-color: #ccebff;
+	font-size: 18px;
+	position: right;
+	cursor: pointer;
+	padding: 10px 20px;
+	margin: 0px 900px;
+}
