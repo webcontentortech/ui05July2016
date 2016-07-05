@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="jQuery.js"></script>
-<script src="game.js"></script>
-<center><h2>BUILDING GAME</h2></center>
-<link rel="stylesheet" type="text/css" href="game.css">
-	<title>game</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js"></script>
 </head>
-<body><center>
-<div id="d"> 
-<div id="b"></div>
+<body>
+<h1>chess game</h1>
+<div>
+	<table border="1">
+		<tr>
+			<td width="70" height="70" id="1"   ><img src="whiterooks.jpg" width="70" height="70" ></td><td width="70" height="70" id="2" class="color" ><img src="white.jpg" width="70" height="70" ></td><td width="70" height="70" id="3" ><img src="byhoops.png" width="70" height="70" ></td><td width="70" height="70" id="4" class="color"><img src="whitequeen.jpg" width="70" height="70" ></td><td width="70" height="70" id="5" ><img src="whiteking.jpg" width="70" height="70" ><td width="70" height="70" id="6" class="color" ><img src="byhoops.png" width="70" height="70" ><td width="70" height="70" id="7" ><img src="white.jpg" width="70" height="70" ></td><td width="70" height="70" id="8" class="color" ><img src="whiterooks.jpg" width="70" height="70" >
+		</tr>
+		<tr>
+		<td width="70" height="70" id="9" class="color" ><img src="whitepawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="10"  ><img src="whitepawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="11"  class="color"><img src="whitepawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="12" ><img src="whitepawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="13" class="color" ><img src="whitepawns.jpg" width="70" height="70" ><td width="70" height="70" id="14"  ><img src="whitepawns.jpg" width="70" height="70" ><td width="70" height="70" id="15" class="color" ><img src="whitepawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="16"  ><img src="whitepawns.jpg" width="70" height="70" >
+			
+		</tr>
+		<tr>
+			<td width="70" height="70" id="17"  ></td><td width="70" height="70" id="18" class="color" ></td><td width="70" height="70" id="19" ></td><td width="70" height="70" id="20" class="color" ></td><td width="70" height="70" id="21" ><td width="70" height="70" id="22" class="color" ><td width="70" height="70" id="23" ></td><td width="70" height="70" id="24" class="color" >
+		</tr>
+		<tr>
+			<td width="70" height="70" id="25" class="color"  ></td><td width="70" height="70" id="26"  ></td><td width="70" height="70" id="27" class="color" ></td><td width="70" height="70" id="28"  ></td><td width="70" height="70" id="29" class="color" ><td width="70" height="70" id="30"  ><td width="50" height="70" id="31" class="color ></td><td width="70" height="70" id="32" " >
+		</tr>
+		<tr>
+			<td width="70" height="70" id="33"  ></td><td width="70" height="70" id="34" class="color" ></td><td width="70" height="70" id="35" ></td><td width="70" height="50" id="36" class="color" ></td><td width="70" height="70" id="37" ><td width="70" height="70" id="38" class="color" ><td width="70" height="70" id="39" ></td><td width="70" height="70" id="40" class="color" >
+		</tr>
+		<tr>
+			<td width="70" height="70" id="41" class="color"  ></td><td width="70" height="70" id="42"  ></td><td width="70" height="70" id="43"  class="color" ></td><td width="70" height="70" id="44" ></td><td width="70" height="70" id="45"  class="color"><td width="70" height="70" id="46" ><td width="70" height="70" id="47" class="color" ></td><td width="70" height="70" id="48"  >
+		</tr>
+		<tr>
+			<td width="70" height="70" id="49"  ><img src="blackpawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="50" class="color"><img src="blackpawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="51" ><img src="blackpawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="52" class="color" ><img src="blackpawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="53" ><img src="blackpawns.jpg" width="70" height="70" ><td width="70" height="70" id="54" class="color" ><img src="blackpawns.jpg" width="70" height="70" ><td width="70" height="70" id="55" ><img src="blackpawns.jpg" width="70" height="70" ></td><td width="70" height="70" id="56" class="color" ><img src="blackpawns.jpg" width="70" height="70" >
+		</tr>
+		<tr>
+			<td width="70" height="70" id="57" class="color"  ><img src="blackrooks.jpg" width="70" height="70" ></td><td width="70" height="70" id="58"  ><img src="blackknight.jpg" width="70" height="70" ></td><td width="70" height="50" id="59" class="color" ><img src="blackbishops.jpg" width="70" height="70" ></td><td width="70" height="70" id="60"  ><img src="blackqueen.jpg" width="70" height="70" ></td><td width="70" height="70" id="61" class="color" ><img src="blackking.jpg" width="70" height="70" ><td width="70" height="70" id="62"  ><img src="blackbishops.jpg" width="70" height="70" ><td width="70" height="70" id="63" class="color" ><img src="blackknight.jpg" width="70" height="70" ></td><td width="70" height="70" id="64"  ><img src="blackrooks.jpg" width="70" height="70" >
+		</tr>
 
-	
+
+	</table>
 </div>
-</center>
+
 </body>
 </html>
