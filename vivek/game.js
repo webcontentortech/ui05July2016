@@ -1,32 +1,38 @@
 $( document ).ready(function() {
 
 
- $("#b").animate({marginTop: "487px"},9000,"linear");
 
-           document.addEventListener("keydown", keyDownTextField, false);
-
-function keyDownTextField(e) {
-var keyCode = e.keyCode;
-  if(keyCode==37) {
-  	
-  	$("#b").animate({marginLeft:"100px"},9000,"linear");
-  }
-  console.log("d");
-  	if(keyCode==38) {
-  		
-  	$("#b").animate({marginRight:"100px"},9000,"linear");
-  }
-  	if(keyCode==39) {
-  	
-  	$("#b").animate({marginUp:"100px"},9000,"linear");
-  }
-  	if(keyCode==40) {
-  		
-  	$("#b").animate({marginDown:"100px"},9000,"linear");
-  }
-  
-
+$(".b").animate({marginTop: "487px"},9000,"linear");
+document.onkeydown = function(e) {
+switch (e.keyCode) {
+case 37:
+moveLeft();
+break;
+case 38:
+moveup();
+break;
+case 39:
+moveRight();
+break;
+case 40:
+movedown();
+break;
 }
+};
+function moveRight(){
+$(".b").animate().stop();
+$(".b").animate({'marginLeft' : "385px"},5000, "linear"
+)};
+function moveLeft(){
+$(".b").animate().stop();
+$(".b").animate({'marginLeft' : "-385px"},5000, "linear"
+// body...
+)};
+function movedown(){
+$(".b").animate().stop();
+$(".b").animate({'marginTop' : "485px"},2000, "linear"
+// body...
+)};
 
 
 
