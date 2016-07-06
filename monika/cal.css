@@ -3,8 +3,23 @@ table{
     border-spacing: 30px;
     text-align: center;
 }
-#menu {
+#menu li {
 	list-style-type:none;
 	padding: 10px 0;
 	
+}
+#menu .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+
+#menu .next {
+    float: right;
+    padding-top: 10px;
+}
+#menu{
+	padding: 30px 10px;
+	width: 1200px;
+	height: 70px
 }
