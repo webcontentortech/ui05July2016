@@ -1,0 +1,10 @@
+table{
+    border-collapse: separate;
+    border-spacing: 30px;
+    text-align: center;
+}
+#menu {
+	list-style-type:none;
+	padding: 10px 0;
+	
+}
