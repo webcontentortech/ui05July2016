@@ -2,19 +2,18 @@
 <html>
 <head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="cal.js"></script>
 <link rel="stylesheet" type="text/css" href="cal.css">
 	<title></title>
 </head>
 <body>
-<ul id="menu">
-	<li class="prev"><button onclick="prev()">&#10094;</button></li>
-    <li class="next"><button onclick="next()">&#10095;</button></li>
-	<center>
-    <li id="month"><strong><br>2016</strong></li>
-	</center>
-</ul>
+
+<div id="p">
+	<span><button id="prev">&#10094;</button></span>
+	<span id="monthw"><strong> </strong></span>
+    <span><button id="next">&#10095;</button></span>
+</div>
 <table style="width: 1200px;height: 500px; text-align:center;">
 <tr>
 	<th>Sun</th>
