@@ -1,47 +1,129 @@
-<head>
-		<h1>Metro Application</h1>
-		<script type="text/javascript" src="jquery.js"></script>
-		<script type="text/javascript" src="MetroApp.js"></script>
-	</head>
-	<body>
-		<table border="1" height="50px" width="800px">
-			<tr>
-				<td><h3>Enter The Boarding Station</h3>
-					<select name="test">
-    					<option hidden="true">Please select a name</option>
-					    <option value="">Vaishali</option>
-					    <option value="">Kaushambi</option>
-					    <option value="">Anand Vihar</option>
-					</select>
-				</td>
-				<td><h3>Enter The Deboarding Station</h3>
-					<select name="test">
-    					<option hidden="true">Please select a name</option>
-					    <option value="">Dwarka Sec-7</option>
-					    <option value="">Dwarka Sec-8</option>
-					    <option value="">Dwarka Sec-9</option>
-					</select>
-				</td>
-				<td>
-					<button id="search">Search</button>
-				</td>
-				<td>
-					<button id="fullMap">FullMap</button>
-				</td>
-			</tr>
-		</table>
-		<table border="1" width="800px" id="extraDetail">	
-			<tr>
-				<td><h4>Fare Price</h4>
-					<input type="text" name="fare price" style="width:100px;height:20px; color:black; border:solid" disabled="disable">
-				</td>
-				<td><h4>No Of Station</h4>
-					<input type="text" name="No Of Station" style="width:100px;height:20px; color:black; border:solid" disabled="disable">
-				</td>
-				<td><h4>Time Taken</h4>
-					<input type="text" name="Time Taken" style="width:100px;height:20px; color:black; border:solid" disabled="disable">
-				</td>
-			</tr>
-		</table>
-		<img src="map.jpg" height="800px" width="800px" id="Map">
-	</body>
+    <head>
+
+        <title>Metro Application</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="metro.js"></script>
+        <script type="text/javascript" src="underscore.js"></script>
+    </head>
+    <body>
+        <table border="1" height="50px" width="800px">
+            <tr>
+                <td><h3>Enter The Boarding Station</h3>
+                    <select name="test" id="boardingStation">
+                        <option hidden="true"></option>
+                        <option value="">Vaishali</option>
+                        <option value="">Kaushambi</option>
+                        <option value="">Anand Vihar</option>
+                        <option value="">Karkarduma</option>
+                        <option value="">Preet Vihar</option>
+                        <option value="">Nirman Vihar</option>
+                        <option value="">Laxmi Nagar</option>
+                        <option value="">Yamuna Bank</option>
+                        <option value="">Indraprastha</option>
+                        <option value="">Pragati Maidan</option>
+                        <option value="">Mandi House</option>
+                        <option value="">Barakhambha Road</option>
+                        <option value="">Rajiv Chowk</option>
+                        <option value="">Ramakrishna Ashram Marg</option>
+                        <option value="">Jhandewalan</option>
+                        <option value="">Karol Bagh</option>
+                        <option value="">Rajendra Place</option>
+                        <option value="">Patel Nagar</option>
+                        <option value="">Shadipur</option>
+                        <option value="">Kirti Nagar</option>
+                        <option value="">Moti Nagar</option>
+                        <option value="">Ramesh Nagar</option>
+                        <option value="">Rajouri Garden</option>
+                        <option value="">Tagore Garden</option>
+                        <option value="">Subhash Nagar</option>
+                        <option value="">Tilak Nagar</option>
+                        <option value="">Janakpuri West</option>
+                        <option value="">Janakpuri East</option>
+                        <option value="">Uttam Nagar East</option>
+                        <option value="">Uttam Nagar West</option>
+                        <option value="">Nawada</option>
+                        <option value="">Dwarka Mor</option>
+                        <option value="">Dwarka</option>
+                        <option value="">Dwarka Sector 14</option>
+                        <option value="">Dwarka Sector 13</option>
+                        <option value="">Dwarka Sector 12</option>
+                        <option value="">Dwarka Sector 11</option>
+                        <option value="">Dwarka Sector 10</option>
+                        <option value="">Dwarka Sector 9</option>
+                        <option value="">Dwarka Sector 8</option>    
+                    </select>
+                </td>
+                <td><h3>Enter The Deboarding Station</h3>
+                    <select name="test" id="deboardingStation">
+                        <option hidden="true"></option>
+                        <option value="">Dwarka Sector 21</option>
+                        <option value="">Dwarka Sector 8</option>
+                        <option value="">Dwarka Sector 9</option>
+                        <option value="">Dwarka Sector 10</option>
+                        <option value="">Dwarka Sector 11</option>
+                        <option value="">Dwarka Sector 12</option>
+                        <option value="">Dwarka Sector 13</option>
+                        <option value="">Dwarka Sector 14</option>
+                        <option value="">Dwarka</option>
+                        <option value="">Dwarka Mor</option>
+                        <option value="">Nawada</option>
+                        <option value="">Uttam Nagar West</option>
+                        <option value="">Uttam Nagar East</option>
+                        <option value="">Janakpuri West</option>
+                        <option value="">Janakpuri East</option>
+                        <option value="">Tilak Nagar</option>
+                        <option value="">Subhash Nagar</option>
+                        <option value="">Tagore Garden</option>
+                        <option value="">Rajouri Garden</option>
+                        <option value="">Ramesh Nagar</option>
+                        <option value="">Moti Nagar</option>
+                        <option value="">Kirti Nagar</option>
+                        <option value="">Shadipur</option>
+                        <option value="">Patel Nagar</option>
+                        <option value="">Rajendra Place</option>
+                        <option value="">Karol Bagh</option>
+                        <option value="">Jhandewalan</option>
+                        <option value="">Ramakrishna Ashram Marg</option>
+                        <option value="">Rajiv Chowk</option>
+                        <option value="">Barakhambha Road</option>
+                        <option value="">Mandi House</option>
+                        <option value="">Pragati Maidan</option>
+                        <option value="">Indraprastha</option>
+                        <option value="">Yamuna Bank</option>
+                        <option value="">Laxmi Nagar</option>
+                        <option value="">Nirman Vihar</option>
+                        <option value="">Preet Vihar</option>
+                        <option value="">Karkarduma</option>
+                        <option value="">Anand Vihar</option>
+                        <option value="">Kaushambi</option>
+                    </select>
+                </td>
+                <td>
+                    <button id="search">Search</button>
+                    <button id="reset">Reset</button>
+                </td>
+                <td>
+                    <button id="fullMap">FullMap</button>
+                </td>
+            </tr>
+        </table>
+        <table border="1" width="800px" id="extraDetail"> 
+            <tr>
+                <td><h4>Fare Price</h4>
+                    <div style="width:100px;height:20px; color:black; border:solid" disabled="disable" id="fareprice">
+                    </div> 
+                </td>
+                <td><h4>No Of Station</h4>
+                    <div style="width:100px;height:20px; color:black; border:solid" disabled="disable" id="noofstation">
+                    </div>                
+                </td>
+                <td><h4>Time Taken</h4>
+                    <div style="width:100px;height:20px; color:black; border:solid" disabled="disable" id="timetaken">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <img src="map.jpg" height="800px" width="800px" id="Map">
+    </body>
+
+		
