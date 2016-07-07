@@ -1,131 +1,133 @@
 $(document).ready(function(){
-    
-
     var boxopened="";
     var imgopened="";
     var counter=0;
     var imgfound=0;
     addimage();
-    reset();
-    
-    
-
+    resset();
+    count();
+    Randomimage();
+    start();
+   
     function addimage(){
-        $("#image1").hide();
+        $("#39").hide();
         $("#1").click(function(){
-        $("#image1").show();
+            $("#39").show();
         });
-       
-        $("#image2").hide();
+        $("#40").hide();
         $("#2").click(function(){
-        $("#image2").show();
+            $("#40").show();
         });
-        
-        $("#image3").hide();
+        $("#41").hide();
         $("#3").click(function(){
-        $("#image3").show();
+            $("#41").show();
         });
-
-        $("#image4").hide();
+        $("#42").hide();
         $("#4").click(function(){
-        $("#image4").show();
+            $("#42").show();
         });
-
-        $("#image5").hide();
+        $("#43").hide();
         $("#5").click(function(){
-        $("#image5").show();
+            $("#43").show();
         });
-
-        $("#image6").hide();
+        $("#44").hide();
         $("#6").click(function(){
-        $("#image6").show();
+            $("#44").show();
         });
-
-        $("#image7").hide();
+        $("#45").hide();
         $("#7").click(function(){
-        $("#image7").show();
+            $("#45").show();
         });
-
-        $("#image8").hide();
+        $("#46").hide();
         $("#8").click(function(){
-        $("#image8").show();
+            $("#46").show();
+        });
+        $("#47").hide();
+        $("#9").click(function(){
+            $("#47").show();
+        });
+        $("#48").hide();
+        $("#10").click(function(){
+            $("#48").show();
+        });
+        $("#49").hide();
+        $("#11").click(function(){
+            $("#49").show();
+        });
+        $("#50").hide();
+        $("#12").click(function(){
+            $("#50").show();
+        });
+        $("#51").hide();
+        $("#13").click(function(){
+            $("#51").show();
+        });
+        $("#52").hide();
+        $("#14").click(function(){
+            $("#52").show();
+        });
+        $("#53").hide();
+        $("#15").click(function(){
+            $("#53").show();
+        });
+        $("#54").hide();
+        $("#16").click(function(){
+            $("#54").show();
+        });
+        $("#55").hide();
+        $("#17").click(function(){
+            $("#55").show();
+        });
+        $("#56").hide();
+        $("#18").click(function(){
+            $("#56").show();
+        });
+        $("#57").hide();
+        $("#19").click(function(){
+            $("#57").show();
+        });
+        $("#58").hide();
+        $("#20").click(function(){
+            $("#58").show();
         });
 
-        $("#image9").hide();
-        $("#9").click(function(){
-        $("#image9").show();
-        });
-        $("#image10").hide();
-        $("#10").click(function(){
-        $("#image10").show();
-        });
-        $("#image11").hide();
-        $("#11").click(function(){
-        $("#image11").show();
-        });
-        $("#image12").hide();
-        $("#12").click(function(){
-        $("#image12").show();
-        });
-        $("#image13").hide();
-        $("#13").click(function(){
-        $("#image13").show();
-        });
-        $("#image14").hide();
-        $("#14").click(function(){
-        $("#image14").show();
-        });
-        $("#image15").hide();
-        $("#15").click(function(){
-        $("#image15").show();
-        });
-        $("#image16").hide();
-        $("#16").click(function(){
-        $("#image16").show();
-        });
-        $("#image17").hide();
-        $("#17").click(function(){
-        $("#image17").show();
-        });
-        $("#image18").hide();
-        $("#18").click(function(){
-        $("#image18").show();
-        });
-        $("#image19").hide();
-        $("#19").click(function(){
-        $("#image19").show();
-        });
-        $("#image20").hide();
-        $("#20").click(function(){
-        $("#image20").show();
-        
-        });
+        var s;
+        var v;
+        for (var v= 39;v<=58; v++){
+        $("#"+v).hide();
+            for (var s=1;s<=20; s++) {
+                $("#"+s).click(function(){
+                    for (var v=39;v<=58; v++){
+                        $("#"+v).show();
+                    }
+                });
+            }
+        }
     }
 
     function Randomimage(){
-        console.log("kiii");
-        return Math.round(Math.random()*19)+1;
-        
-    }
+        x= Math.round(Math.random()*19)+1;
+        console.log(x);
+    } 
 
-   
-    function reset(){
+    function resset(){
         $("#reset").click(function(){
             addimage();
         });
     }
 
-    /*function imagematch(){
-        console.log("hiii");
-        
-        $("#1").click(function(){
-        if((/home/admin/webcontentor/ui05July2016/shrangali/images/boll.jpeg)==(/home/admin/webcontentor/ui05July2016/shrangali/images/boll.jpeg)){
-    
-            $(this).remove();
-        }*/
-    
-        
-     
-    
+    function count(){
+        $("#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20").click(function(){
+            $("#count").html(++counter);
+            resset();
+        });
+    }
 
+    function start(){
+        $("#start").click(function(){
+            counter = 0;
+            $('#count').text(counter);
+            addimage();
+        });  
+    }    
 });
