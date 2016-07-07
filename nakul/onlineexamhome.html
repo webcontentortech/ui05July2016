@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript" src="onlineexam.js"></script>
+	<link rel="stylesheet" type="text/css" href="onlineexam.css">
+</head>
+<body onload="timer()">
+	<h2 id="status"></h2>
+	<h2 id="timecheck"></h2>
+	<div class="maindiv" id="maindiv" style="position: relative;">	
+	</div>
+	<div>
+		<button class="savebutton" onclick="showQuestion()">Save&Next</button>
+		<button class="submitbutton" onclick="submitExam()">SUBMIT</button>	
+	</div>
+</body>
+</html>
