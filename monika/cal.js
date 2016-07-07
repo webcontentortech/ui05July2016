@@ -4,7 +4,8 @@ var array=["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16
 var months=["January", "February","March","April","May","June","July","August","September","October","November","December"];
 
 $(document).ready(function(){
-date();	
+	date();
+	cal();	
 });
 
 function date(){
@@ -18,9 +19,11 @@ function date(){
 function cal(){
 	for (var i = 0; i<months.length; i++) {
 	var year= months[i];
-	
-	}	
+	document.getElementById("month").innerHTML=year;
+	}
+
 }
+console.log(year);
 
 	/*var date = array[0];
 	document.getElementById("one").innerHTML = date; 
