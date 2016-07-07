@@ -8,18 +8,22 @@ table{
 	padding: 10px 0;
 	
 }
-#menu .prev {
+#p #prev {
     float: left;
     padding-top: 10px;
 }
 
 
-#menu .next {
+#p #next {
     float: right;
     padding-top: 10px;
 }
-#menu{
+#p{
 	padding: 30px 10px;
 	width: 1200px;
 	height: 70px
+}
+span{
+	width:400px;
+	height:70px;
 }
