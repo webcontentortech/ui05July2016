@@ -1,39 +1,56 @@
 $( document ).ready(function() {
+var imgArray = [];
+    imgArray[0] = new Image();
+    imgArray[0].src = "images/1";
+    $('#check').html(imgArray[0]);
+    console.log(imgArray[0]);
+    imgArray[1] = new Image();
+    imgArray[1].src = "images/2";
+    imgArray[2] = new Image();
+    imgArray[2].src = "images/3";
+    console.log(imgArray[2].src);
+    imgArray[3] = new Image();
+    imgArray[3].src = "images/4";
+    imgArray[4] = new Image();
+    imgArray[4].src = "images5";
+    
+    for (var i = 0; i <= 5; i++) {
+        var x = imgArray[i].src;
+        console.log(x);
+        $("#1").animate({marginTop: "466px"},900,"linear");
+        console.log(x)
+    }
 
-
-
-$(".b").animate({marginTop: "487px"},9000,"linear");
 document.onkeydown = function(e) {
-switch (e.keyCode) {
-case 37:
-moveLeft();
-break;
-case 38:
-moveup();
-break;
-case 39:
-moveRight();
-break;
-case 40:
-movedown();
-break;
+    switch (e.keyCode) {
+    case 37:
+        moveLeft();
+        break;
+    case 38:
+        moveup();
+        break;
+    case 39:
+        moveRight();
+        break;
+    case 40:
+        movedown();
+        break;
+    }
 }
-};
+
 function moveRight(){
-$(".b").animate().stop();
-$(".b").animate({'marginLeft' : "385px"},5000, "linear"
-)};
+    $("#1").animate().stop();
+    $("#1").animate({'marginLeft' : "365px"},5000, "linear");
+}
+
 function moveLeft(){
-$(".b").animate().stop();
-$(".b").animate({'marginLeft' : "-385px"},5000, "linear"
-// body...
-)};
+    $("#1").animate().stop();
+    $("#1").animate({'marginLeft' : "-365px"},5000, "linear");
+}
+
 function movedown(){
-$(".b").animate().stop();
-$(".b").animate({'marginTop' : "485px"},2000, "linear"
-// body...
-)};
-
-
-
+    $("#1").animate().stop();
+    $("#1").animate({'marginTop' : "466px"},2000, "linear");
+}
 });
+
