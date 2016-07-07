@@ -1,7 +1,7 @@
 var questions = [["What is 10 + 4?", "12", "14", "16", "B" ],[ "What is 20 - 9?", "7", "13", "11", "C" ],[ "What is 7 x 3?", "21", "24", "25", "A" ],[ "What is 8 / 2?", "10", "2", "4", "C" ]];
 
 var x = 0;
-var test, studentObj, a, b, c, username, password, minute = 10, second = 10, id;
+var test, studentObj, a, b, c, username, password, minute = 10, second = 60, id, option, correctAns = 0;
 
 $("document").ready(function(){
     //$(".maindiv").hide();
@@ -11,8 +11,8 @@ $("document").ready(function(){
 
 function showQuestion(){
     //timer();
-    test = document.getElementById("maindiv");
-    document.getElementById("status").innerHTML = "Question "+(x+1)+" of "+questions.length;
+    test = document.getElementById("mainform");
+    document.getElementById("status").innerHTML = "Question "+(x)+" of "+questions.length;
     ques = questions[x][0];
     a = questions[x][1];
     b = questions[x][2];
@@ -29,7 +29,7 @@ function login(){
     //studentObj = _.find(questions, function(studentObj){return studentObj.hallticket == x});
     username = document.getElementById("hallticket").value;
     password = document.getElementById("password").value;
-    if ( username == "nakul" && password == "123"){
+    if (username == "nakul" && password == "123"){
     window.location = "onlineexamhome.html"; 
     return false;
     }
@@ -43,17 +43,37 @@ function timer(){
         second--;
         document.getElementById("timecheck").innerHTML = minute+":"+second;
         id = setTimeout("timer()", 1000);
-    } else if(second == 0){
-        minute--;
-        document.getElementById("timecheck").innerHTML = minute+":"+second;
-        clearTimeout("timer()", id)
-    }else{
-
-    } 
+    }else{ 
+        if(second == 0){
+            minute--;
+            if(minute == 0){
+            //document.getElementById("timecheck").innerHTML = minute+":"+second;
+            clearTimeout(id);
+            submitExam();
+            }else{
+                second = 60;
+                document.getElementById("timecheck").innerHTML = minute+":"+second;
+                id = setTimeout("timer()", 1000);
+            }
+        }
+    }
 }
 
 function submitExam(){
-    document.getElementById("maindiv").innerHTML = "Submit";
-    alert("hgfdg");    
+    document.getElementById("mainform").innerHTML = "You have successfully submitted your answers.";   
 }
 
+function checked(){
+    option = document.getElementByName("option");
+    for (var i = 0; i < option.length; i++) {
+        var opt = option[i];
+        if (opt.checked) {
+            optn = opt.value;
+        } 
+    }
+    if (optn == questions[x][4]) {
+        correctAns++;
+    }
+    x++;
+
+}
