@@ -3,21 +3,21 @@
     var imgArray = [];
 $( document ).ready(function() {
 	imgArray[0] = new Image();
-	imgArray[0].src = "1";
+	imgArray[0].src = "images/1";
 
 	$('#check').html(imgArray[0]);
 
     
 	console.log(imgArray[0]);
 	imgArray[1] = new Image();
-	imgArray[1].src = "2";
+	imgArray[1].src = "images/2";
 	imgArray[2] = new Image();
-	imgArray[2].src = "3";
+	imgArray[2].src = "images/3";
 	console.log(imgArray[2].src);
 	imgArray[3] = new Image();
-	imgArray[3].src = "4";
+	imgArray[3].src = "images/4";
 	imgArray[4] = new Image();
-	imgArray[4].src = "5";
+	imgArray[4].src = "images5";
 
 	
 	for (var i = 0; i <= 5; i++) {
