@@ -1,8 +1,5 @@
-
-
-var imgArray = [];
-
 $( document ).ready(function() {
+var imgArray = [];
     imgArray[0] = new Image();
     imgArray[0].src = "images/1";
     $('#check').html(imgArray[0]);
@@ -24,36 +21,36 @@ $( document ).ready(function() {
         console.log(x)
     }
 
-    document.onkeydown = function(e) {
-        switch (e.keyCode) {
-            case 37:
-                moveLeft();
-                break;
-            case 38:
-                moveup();
-                break;
-            case 39:
-                moveRight();
-                break;
-            case 40:
-                movedown();
-                break;
-        }
+document.onkeydown = function(e) {
+    switch (e.keyCode) {
+    case 37:
+        moveLeft();
+        break;
+    case 38:
+        moveup();
+        break;
+    case 39:
+        moveRight();
+        break;
+    case 40:
+        movedown();
+        break;
     }
+}
 
-    function moveRight(){
-        $("#1").animate().stop();
-        $("#1").animate({'marginLeft' : "365px"},5000, "linear");
-    }
+function moveRight(){
+    $("#1").animate().stop();
+    $("#1").animate({'marginLeft' : "365px"},5000, "linear");
+}
 
-    function moveLeft(){
-        $("#1").animate().stop();
-        $("#1").animate({'marginLeft' : "-365px"},5000, "linear");
-    }
+function moveLeft(){
+    $("#1").animate().stop();
+    $("#1").animate({'marginLeft' : "-365px"},5000, "linear");
+}
 
-    function movedown(){
-        $("#1").animate().stop();
-        $("#1").animate({'marginTop' : "466px"},2000, "linear");
-    }
+function movedown(){
+    $("#1").animate().stop();
+    $("#1").animate({'marginTop' : "466px"},2000, "linear");
+}
 });
 
