@@ -6,17 +6,13 @@ $(document).ready(function(){
     var firstPlayer = 1;
     var secondPlayer = 1;
     var chance = true;
-
     var snake = ["7","31","37","39", "55", "64", "87","98"];
-
     $("#start").click(function(){
         $("#dice").show();
         $("#diceValue").show();
-
         if (chance) {
-        $("#1").addClass("addGreen");
-        }
-        else{
+            $("#1").addClass("addGreen");
+        }else{
             $("#1").addClass("addYellow");
         } 
     });
@@ -32,30 +28,27 @@ $(document).ready(function(){
             chance = false;
             $("#" + firstPlayer).removeClass("addGreen");
             firstPlayerMove();
-        }
-        else{
+        }else{
             chance = true;
             $("#" + secondPlayer).removeClass("addYellow");
             secondPlayerMove();
         }
     });
-        
+
     var firstPlayerMove = function(){
         $("#1").removeClass("addGreen"); 
         for (var i = 0; i < snake.length; i++) {
             if (snake[i]==firstPlayer) {
                 console.log("snake bites me");
                 firstNotMove();
-            }
-            else
-            {
+            }else{
                 console.log("ha ha ha safe");
             }
         }
             firstPlayer = firstPlayer + dice;
             console.log("in move method:"+firstPlayer);
             $("#" + firstPlayer).addClass("addGreen");
-        }
+    }
 
     var secondPlayerMove = function(){
         $("#1").removeClass("addYellow");
@@ -63,8 +56,7 @@ $(document).ready(function(){
             if (snake[i]==secondPlayer) {
                 console.log("snake bites me");
                 secondNotMove();
-            }
-            else{
+            }else{
                 console.log("ha ha ha safe");
             }
         } 
@@ -77,9 +69,8 @@ $(document).ready(function(){
         firstPlayer = firstPlayer - dice;
        // console.log("after minus:" + firstPlayer);
     }
+    
     var secondNotMove = function(){
         secondPlayer = secondPlayer - dice;
     }
-
-
- });   
+});   
