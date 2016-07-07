@@ -5,8 +5,6 @@ var test, studentObj, a, b, c, username, password, minute = 10, second = 60, id,
 
 $("document").ready(function(){
     //$(".maindiv").hide();
-
-
 });
 
 function showQuestion(){
@@ -74,6 +72,5 @@ function checked(){
     if (optn == questions[x][4]) {
         correctAns++;
     }
-    x++;
-
+    x++;    
 }
