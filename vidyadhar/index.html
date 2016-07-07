@@ -1,95 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>test</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="chess.css">
-        <script type="text/javascript" src="chess.js"></script>
+        <script type="text/javascript" src="v.js"></script>
+        <link rel="stylesheet" type="text/css" href="v.css">
     </head>
     <body>
-        <h1>chess game</h1>
-        <input type="button" name="button" id="hii">
-        <div>
-            <table border="1">
-                <tr>
-                    <td width="70" height="70"  id="h" ><img src="checkmate/whiterooks.jpg" width="70" height="70" id="1"  ></td>
-                    <td width="70" height="70"  class="color" ><img src="white.jpg" width="70" height="70" id="2" ></td>
-                    <td width="70" height="70"  ><img src="byhoops.png" width="70" height="70" id="3"  ></td>
-                    <td width="70" height="70" class="color"><img src="whitequeen.jpg" width="70" height="70" id="4"  ></td>
-                    <td width="70" height="70"  ><img src="whiteking.jpg" width="70" height="70" id="5" >
-                    <td width="70" height="70" class="color" ><img src="byhoops.png" width="70" height="70"  id="6" >
-                    <td width="70" height="70"  ><img src="white.jpg" width="70" height="70" id="7" ></td>
-                    <td width="70" height="70" class="color" ><img src="whiterooks.jpg" width="70" height="70"  id="8" >
-                </tr>
-                <tr>
-                    <td width="70" height="70"  class="color" id=70 ><img src="whitepawns.jpg" width="70" height="70" id="9" ></td>
-                    <td width="70" height="70"   ><img src="whitepawns.jpg" width="70" height="70" id="10" ></td>
-                    <td width="70" height="70"   class="color"><img src="whitepawns.jpg" width="70" height="70" id="11" ></td>
-                    <td width="70" height="70"  ><img src="whitepawns.jpg" width="70" height="70" id="12" ></td>
-                    <td width="70" height="70" class="color" ><img src="whitepawns.jpg" width="70" height="70"  id="13"  >
-                    <td width="70" height="70"   ><img src="whitepawns.jpg" width="70" height="70" id="14" >
-                    <td width="70" height="70"  class="color" ><img src="whitepawns.jpg" width="70" height="70" id="15" ></td>
-                    <td width="70" height="70"   ><img src="whitepawns.jpg" width="70" height="70" id="16" >
-                </tr>
-                <tr>
-                    <td width="70" height="70" id="17"  ></td>
-                    <td width="70" height="70" id="18" class="color" ></td>
-                    <td width="70" height="70" id="19" ></td>
-                    <td width="70" height="70" id="20" class="color" ></td>
-                    <td width="70" height="70" id="21" >
-                    <td width="70" height="70" id="22" class="color" >
-                    <td width="70" height="70" id="23" ></td>
-                    <td width="70" height="70" id="24" class="color" >
-                </tr>
-                <tr>
-                    <td width="70" height="70" id="25" class="color"  ></td>
-                    <td width="70" height="70" id="26"  ></td>
-                    <td width="70" height="70" id="27" class="color" ></td>
-                    <td width="70" height="70" id="28"  ></td>
-                    <td width="70" height="70" id="29" class="color" >
-                    <td width="70" height="70" id="30"  ><td width="50" height="70" id="31" class="color ></td>
-                    <td width="70" height="70" id="32" " >
-                </tr>
-                <tr>
-                    <td width="70" height="70" id="33"  ></td>
-                    <td width="70" height="70" id="34" class="color" ></td>
-                    <td width="70" height="70" id="35" ></td>
-                    <td width="70" height="50" id="36" class="color" ></td>
-                    <td width="70" height="70" id="37" >
-                    <td width="70" height="70" id="38" class="color" >
-                    <td width="70" height="70" id="39" ></td>
-                    <td width="70" height="70" id="40" class="color" >
-                </tr>
-                <tr>
-                    <td width="70" height="70" id="41" class="color"  ></td>
-                    <td width="70" height="70" id="42"  ></td>
-                    <td width="70" height="70" id="43"  class="color" ></td>
-                    <td width="70" height="70" id="44" ></td>
-                    <td width="70" height="70" id="45"  class="color">
-                    <td width="70" height="70" id="46" >
-                    <td width="70" height="70" id="47" class="color" ></td>
-                    <td width="70" height="70" id="48"  >
-                </tr>
-                <tr>
-                    <td width="70" height="70" id="49"  ><img src="blackpawns.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="50" class="color"><img src="blackpawns.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="51" ><img src="blackpawns.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="52" class="color" ><img src="blackpawns.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="53" ><img src="blackpawns.jpg" width="70" height="70" >
-                    <td width="70" height="70" id="54" class="color" ><img src="blackpawns.jpg" width="70" height="70" >
-                    <td width="70" height="70" id="55" ><img src="blackpawns.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="56" class="color" ><img src="blackpawns.jpg" width="70" height="70" >
-                </tr>
-                <tr>
-                    <td width="70" height="70" id="57" class="color"  ><img src="blackrooks.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="58"  ><img src="blackknight.jpg" width="70" height="70" ></td>
-                    <td width="70" height="50" id="59" class="color" ><img src="blackbishops.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="60"  ><img src="blackqueen.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="61" class="color" ><img src="blackking.jpg" width="70" height="70" >
-                    <td width="70" height="70" id="62"  ><img src="blackbishops.jpg" width="70" height="70" >
-                    <td width="70" height="70" id="63" class="color" ><img src="blackknight.jpg" width="70" height="70" ></td>
-                    <td width="70" height="70" id="64"  ><img src="blackrooks.jpg" width="70" height="70" >
-                </tr>
-            </table>
+        <h1> aptitude test</h1>
+        <button id="start">start</button>
+        <div style= "width:1200px; height:500px; border:solid 1px black;">
+            <div style="width:400px; height:200px; border:solid 1px black;" class="v" id="smallDiv" ></div>
+            <div id="9"><img src="img/rocket.jpg" width="70"; height="70" /></div>
+            <div id="2"><img src="img/b.jpg" width="20"; height="20" class="c" /></div>
+            <div id="3"><img src="img/b.jpg" width="20"; height="20" class="d" /></div>
+            <span id="1"><img src="img/b.jpg" width="20"; height="20" class="e" /></span>
+            <span id="5"><img src="img/b.jpg" width="20"; height="20" class="f" /></span>
+            <span id="6"><img src="img/b.jpg" width="20"; height="20" class="g" /></span>
+            <span id="7"><img src="img/b.jpg" width="20"; height="20" class="h" /></span>
+            
         </div>
     </body>
 </html>
+        
+           
+
+          
+        
+               
+          
+            
+
+            

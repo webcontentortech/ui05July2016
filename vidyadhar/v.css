@@ -1,0 +1,40 @@
+.v {
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: 150px;
+}
+.c{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 0px;
+}
+
+.d{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 0px;
+}
+.e{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 600px;
+}
+.f{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 1150px;
+}
+.g{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 1150px;
+}
+.h{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 1150px;
+}
+
+
+
