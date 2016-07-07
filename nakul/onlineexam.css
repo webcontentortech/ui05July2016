@@ -1,8 +1,19 @@
-.maindiv{
-	border:#000 2px solid;
-	font-size: 16px;
-	padding: 400px 30px 30px 30px;
-}
+
+.form1 {
+   width: 400px;
+   height: 400px;
+   margin: auto;
+   position: relative;
+   border-style: double;
+ }
+
+.form2 {
+   width: 800px;
+   height: 400px;
+   margin: auto;
+   position: relative;
+   border-style: double;
+ }
 
 .leftspan{
 	border:#000 1px solid;
