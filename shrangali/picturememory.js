@@ -1,14 +1,10 @@
 $(document).ready(function(){
-    var boxopened="";
-    var imgopened="";
     var counter=0;
-    var imgfound=0;
+    var i=1;
     addimage();
     resset();
     count();
-    Randomimage();
-    start();
-   
+    start();   
     function addimage(){
         $("#39").hide();
         $("#1").click(function(){
@@ -90,24 +86,14 @@ $(document).ready(function(){
         $("#20").click(function(){
             $("#58").show();
         });
-
-        var s;
-        var v;
-        for (var v= 39;v<=58; v++){
-        $("#"+v).hide();
-            for (var s=1;s<=20; s++) {
-                $("#"+s).click(function(){
-                    for (var v=39;v<=58; v++){
-                        $("#"+v).show();
-                    }
-                });
-            }
-        }
     }
 
-    function Randomimage(){
-        x= Math.round(Math.random()*19)+1;
-        console.log(x);
+    removeImage();
+       
+    function removeImage() {
+        $("button").click(function() {
+            alert(this.id);
+        });
     } 
 
     function resset(){
@@ -129,5 +115,5 @@ $(document).ready(function(){
             $('#count').text(counter);
             addimage();
         });  
-    }    
+    }     
 });
