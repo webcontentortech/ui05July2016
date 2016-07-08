@@ -23,6 +23,9 @@ table{
 	width: 1200px;
 	height: 70px
 }
+#monthw{
+	text-align: center;
+}
 span{
 	width:400px;
 	height:70px;
