@@ -10,6 +10,9 @@ var stationDifference;
 var timetaken;
 var farePrice;
 var trainSwitch;
+var blueLineSwitch = (stationData[12].stationN0)+1;
+var redLineSwitch = (stationData[48].stationN0)+1;
+var yellowLineSwitch = (stationData[54].stationN0)+1;
 
 $(document).ready(function () {
     $("#Map").hide();
@@ -22,15 +25,21 @@ $(document).ready(function () {
     $("#reset").click(function () {
         $('#boardingStation').val('');
         $('#deboardingStation').val('');
+        $("#Map").hide();
         $("#fareprice").text("0");
         $("#noofstation").text("0");
         $("#timetaken").text("0");
+        $("#trainswitch").text("no switch");
     });
 
     $("#search").click(function () {
         $("#extraDetail").show();
+        
         getStation();
-        getDetail();
+        switchTrain();
+        stationDetail();
+        timetaken = stationDifference*2;
+        farePrice = stationDifference*2;
         $("#fareprice").text(farePrice+"Rs");
         $("#noofstation").text(stationDifference);
         $("#timetaken").text(timetaken+"Min");
@@ -46,36 +55,72 @@ $(document).ready(function () {
         obj2 = _.find(stationData, function(obj2) { return obj2.name == endStation });        
     }
 
-    function getDetail() {
+    function switchTrain() {
         station1 = obj1.stationN0;
         station2 = obj2.stationN0;
-        stationDifference = Math.abs(station2 - station1);
-        timetaken = stationDifference*2;
-        farePrice = stationDifference*(1.5);
+        // stationDifference = Math.abs(station2 - station1);
+        // timetaken = stationDifference*2;
+        // farePrice = stationDifference*(1.5);
         if (station1<=41) {
             if (station2>=63 && station2<=94) {
-                trainSwitch="switch train to yellow line";
+                trainSwitch="switch train to yellow line from Rajiv Chowk station";
             }else if (station2>=42 && station2<=62) {
-                trainSwitch="switch train to yellow line then to red line";
+                trainSwitch="switch train to yellow line from Rajiv Chowk station then to red line from Kashmere Gate station";
             }else{
                 trainSwitch="no switch";
             }
         }else if (station1>=42 && station1<=62) {
             if (station2>=63 && station2<=94) {
-                trainSwitch="switch train to yellow line";
+                trainSwitch="switch train to yellow line from Kashmere Gate station";
             }else if (station2<42) {
-                trainSwitch="switch train to yellow line then to blue line";
+                trainSwitch="switch train to yellow line from Kashmere Gate station then to blue line from Rajiv Chowk station";
             }else{
                 trainSwitch="no switch";
             }
         }else if (station1>=63 && station1<=94) {
             if (station2>=42 && station2<=62) {
-                trainSwitch="switch train to red line";
+                trainSwitch="switch train to red line from Kashmere Gate station";
             }else if (station2<42) {
-                trainSwitch="switch train to blue line";
+                trainSwitch="switch train to blue line from Rajiv Chowk station";
             }else{
                 trainSwitch="no switch";
             }
         }
-    }
+    } 
+    function stationDetail() {
+        if (station1<=41) {
+            if (station2<=41) {
+                stationDifference = Math.abs(station2 - station1);
+            }else if (station2>=42 && station2<=62) {
+                stationDifference = (Math.abs(blueLineSwitch - station1)+4+Math.abs(station2-49));
+            }else if (station2>=63 && station2<=94) {
+                stationDifference = (Math.abs(blueLineSwitch - station1)+Math.abs(station2-74));
+            }else if (station2<71 && station2>73) {
+                stationDifference = (Math.abs(blueLineSwitch - station1)+1+Math.abs(station2-74));
+            }
+        }else if (station1>=42 && station1<=62) {
+            if (station2>=63 && station2<=94) {
+                stationDifference = (Math.abs(redLineSwitch - station1)+1+Math.abs(station2-71));
+            }else if (station2<=12) {
+                stationDifference = (Math.abs(redLineSwitch - station1)+4+Math.abs(station2-12));
+            }else if (station2>=13) {
+                stationDifference = (Math.abs(redLineSwitch - station1)+2+Math.abs(station2-12));
+            }else if (station2>=42 && station2<=62) {
+                Math.abs(station2 - station1);
+            }
+        }else if (station1>=63 && station1<=94) {
+            if (station2>=49 && station2<=62) {
+            stationDifference = (Math.abs(yellowLineSwitch - station1)+Math.abs(station2-48));
+            }
+            else if (station2>=42 && station2<=48) {
+                stationDifference = (Math.abs(yellowLineSwitch - station1)+Math.abs(station2-50));
+            }else if (station2>=63 && station2<=94) {
+                stationDifference = Math.abs(station2 - station1);
+            }else if (station2<=12 && station2>=1) {
+                stationDifference = (Math.abs(yellowLineSwitch - station1)+Math.abs(station2-18));
+            }else if (station2>=13 && station2<=41) {
+                 stationDifference = (Math.abs(yellowLineSwitch - station1)+Math.abs(station2))-8;;
+            }
+        }
+    }   
 });
