@@ -12,22 +12,21 @@
 "17","18","19","20","21","22","23","24","25","26","27","28","29","30"],["December","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16",
 "17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]];*/
 
+var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
 var array=["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16",
 "17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
-
-var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
-    //counter=0;
-    //var i=0;
-    //displaymonth(0);
-
+   
+var t=0, s = 11, mon;
 $(document).ready(function(){
-    date();
-    
     $("#next").click(function(){
-    //counter = (counter + 1) % months.length;
-    //var obj = _.find(months, function(obj){});
-    //$('#monthw').text();
-    cal();
+        $("#monthw").text(months[t]);
+            t++;
+            date();
+    });
+
+    $("#prev").click(function(){
+        $("#monthw").text(months[s]);
+            s--;
     });
 });
 
@@ -39,13 +38,28 @@ function date(){
     }
 }
 
-function cal(){
-    for (var j = 0; j<=months.length; j++) {
-    var year= months[j];
-    //document.getElementById("month").innerHTML=year[0];
-    }
-
+function feb(){
+    for (var j =0; j <=27; j++)
+    var day= array[j];
+    var y = j+1;
+    document.getElementById(y).innerHTML=day;
 }
-console.log(year);
-
+/*
+function year(){
+    //mon = document.getElementById("31").value;
+    if (!months[1]) {
+        date();
+    }else{
+      feb();  
+    } 
+}*/
+//console.log(mon);
+/*
+function cal(){
+     s = months[t];
+    document.getElementById("monthw").innerHTML= s;
+    //t++;
+}
+console.log(s);
+*/
     
